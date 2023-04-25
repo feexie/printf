@@ -11,7 +11,7 @@ void print_number(int n, int *size);
 int _putchar(char c);
 void _puts(char *str);
 unsigned int _strlen(char *s);
-void binary(unsigned int nb, int *size);
+void binary_func(unsigned int nb, int *size);
 void octo(unsigned int nb, int *size);
 void hex_up(unsigned int nb, int *size);
 void hex_low(unsigned int nb, int *size);

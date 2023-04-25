@@ -17,8 +17,8 @@ int print_binary(va_list binary)
 
 /**
  * print_octo - prints the number in octal
- * @o: va_list
- * Return: a  number
+ * @octo: va_list
+ * Return: an octal  number
  */
 
 int print_octo(va_list octo)
@@ -31,21 +31,21 @@ int print_octo(va_list octo)
 
 /**
  * print_hex_up - prints the number in hexadecimal uppercase
- * @X: va_list
- * Return: a number
+ * @hex: argument list va_list
+ * Return: a hexxidecimal  number
  */
 
 int print_hex_up(va_list hex)
 {
 	int number = 0;
 
-	hex_up(va_arg(hex, unsigned int), &number);
+	hex_up_func(va_arg(hex, unsigned int), &number);
 	return (number);
 }
 
 /**
  * print_hex_low - prints the number in hexadecimal lowerecase
- * @x: va_list
+ * @hexx: va_list
  * Return: a number
  */
 
@@ -53,7 +53,7 @@ int print_hex_low(va_list hexx)
 {
 	int number = 0;
 
-	hex_low(va_arg(hexx, unsigned int), &number);
+	hex_low_func(va_arg(hexx, unsigned int), &number);
 	return (number);
 }
 

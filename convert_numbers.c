@@ -19,15 +19,17 @@ bin = 2;
 }
 
 /**
-* octo - convert decimal to octal
-* @nb: number
-* @size: size for printf
+* octo_func - convert decimal to octal
+* @number: number
+* @ptr: size for printf
 */
 
 void octo_func(unsigned int number, int *ptr)
 {
-	unsigned int bin;
-	bin = 8;
+unsigned int bin;
+
+bin = 8;
+
 	if (number / bin)
 	{
 		octo_func(number / bin, ptr);
@@ -38,62 +40,67 @@ void octo_func(unsigned int number, int *ptr)
 
 
 /**
-* hex_up - convert decimal to hexadecimal uppercase
-* @nb: number
-* @size: size for printf
+* hex_up_func - convert decimal to hexadecimal uppercase
+* @number: number
+* @ptr: size for printf
 */
 
 void hex_up_func(unsigned int number, int *ptr)
 {
-	unsigned int = bin;
-	bin = 16;	
+unsigned int bin;
 
-	if (number / bin)
-	{
-		hex_up_func(number / bin, ptr);
-	}
+bin = 16;
+
+if (number / bin)
+{
+hex_up_func(number / bin, ptr);
+}
 	*ptr += 1;
-	if (number % bin < 10)
-		_putchar('0' + number % bin);
-	else
-		_putchar('A' + ((number % bin) - 10));
+if (number % bin < 10)
+	_putchar('0' + number % bin);
+else
+	_putchar('A' + ((number % bin) -10));
 }
 
 /**
-* hex_low - convert decimal to hexadecimal lowercase
-* @nb: number
-* @size: size for printf
+* hex_low_func - convert decimal to hexadecimal lowercase
+* @number: store int number
+* @ptr: pointer  for printf
 */
 
 void hex_low_func(unsigned int number, int *ptr)
 {
-	unsigned  int = bin;
-	bin = 16;
-	if (number / bin)
-	{
-		hex_low_func(number / bin, ptr);
-	}
-	*ptr += 1;
-	if (number % bin < 10)
-		_putchar('0' + number % bin);
-	else
-		_putchar('a' + ((number % bin) - 10));
+unsigned  int bin;
+
+bin = 16;
+
+if (number / bin)
+{
+hex_low_func(number / bin, ptr);
+}
+*ptr += 1;
+if (number % bin < 10)
+	_putchar('0' + number % bin);
+else
+	_putchar('a' + ((number % bin) -10));
 }
 
 /**
 * hex_S - convert decimal to hexadecimal Uppercase
-* @nb: number
-* @size: size for printf
+* @number: number
+* @ptr: int for printf
 */
-void hex_up_func(unsigned int number, int *ptr)
+void hex_S(unsigned int number, int *ptr)
 {
-	unsigned int = bin;
-	bin = 16;
-	int check = 1;
+unsigned int bin;
+
+bin = 16;
+
+int check = 1;
 
 	if (number / bin)
 	{
-		hex_up_func(number / bin, ptr);
+		hex_S(number / bin, ptr);
 	}
 	if (check == 1)
 	{
@@ -104,6 +111,6 @@ void hex_up_func(unsigned int number, int *ptr)
 	if (number % bin < 10)
 		_putchar('0' + number % bin);
 	else
-		_putchar('A' + ((number % bin) - 10));
+		_putchar('A' + ((number % bin) -10));
 	check = 0;
 }

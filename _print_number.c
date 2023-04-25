@@ -25,6 +25,24 @@ void print_number(int number, int *ptr)
 	*ptr += 1;
 	_putchar((remainder % 10) + '0');
 }
+
+/**
+* print_number_u - print number in output
+*
+* @n: integer
+* @size: size for printf
+* Return: nothing
+*/
+void print_number_u(unsigned int n, unsigned int  *size)
+{
+	if (n / 10)
+	{
+		print_number_u(n / 10, size);
+	}
+	*size += 1;
+	_putchar((n % 10) + '0');
+}
+
 /**
 * hex_addr - printf addrresse lowercase hexadecimal
 * @addr: address decimal
@@ -34,7 +52,7 @@ void hex_addr(unsigned long int addr, int *size)
 {
 	if (addr / 16)
 	{
-		hex_low(addr / 16, size);
+		hex_low_func(addr / 16, size);
 	}
 	*size += 1;
 	if (addr % 16 < 10)

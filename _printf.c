@@ -87,6 +87,7 @@ int _printf(const char *_format, ...)
 		{'o', print_octo},
 		{'x', print_hex_low},
 		{'X', print_hex_up},
+		{'S', print_String},
 		{'\0', NULL}
 	};
 

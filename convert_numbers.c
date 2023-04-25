@@ -9,6 +9,7 @@
 void binary_func(unsigned int number, int *ptr)
 {
 unsigned int bin;
+
 bin = 2;
 	if (number / bin)
 	{

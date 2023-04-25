@@ -25,3 +25,20 @@ void print_number(int number, int *ptr)
 	*ptr += 1;
 	_putchar((remainder % 10) + '0');
 }
+/**
+* hex_addr - printf addrresse lowercase hexadecimal
+* @addr: address decimal
+* @size: size for printf
+*/
+void hex_addr(unsigned long int addr, int *size)
+{
+	if (addr / 16)
+	{
+		hex_low(addr / 16, size);
+	}
+	*size += 1;
+	if (addr % 16 < 10)
+		_putchar('0' + (addr) % 16);
+	else
+		_putchar('a' + (((addr) % 16) - 10));
+}

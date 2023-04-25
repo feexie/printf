@@ -1,37 +1,23 @@
 #ifndef MAIN_H
 #define MAIN_H
+#include "_format.h"
 #include <stdarg.h>
-#include <stdio.h>
-#include <unistd.h>
+#include <stdlib.h>
 
+/* lib function*/
+int _printf(const char *_format, ...);
+int _isprintable(int c);
+void print_number(int n, int *size);
+int _putchar(char c);
+void _puts(char *str);
+unsigned int _strlen(char *s);
+void binary(unsigned int nb, int *size);
+void octo(unsigned int nb, int *size);
+void hex_up(unsigned int nb, int *size);
+void hex_low(unsigned int nb, int *size);
+void print_number_u(unsigned int n, unsigned int *size);
+void _putstr(char *str);
+void hex_S(unsigned int nb, int *size);
+void hex_addr(unsigned long int addr, int *size);
 
-/**
-* struct specifier - Struct that contains two data types
-* @fmt: The format.
-* @fn: The function associated.
-*/
-typedef  struct specifier
-{
-char fmt;
-int (*fn)(va_list, char[], int, int, int, int);
-} fmt_t;
-
-int _printf(const char *format, ...);
-int handle_print(const char *fmt, int *i, va_list list, char buffer[],
-int flags, int width, int precision, int size);
-
-/* User define Funtions to print chars and strings */
-
-int print_char(va_list types, char buffer[],
-int flags, int width, int precision, int size);
-int print_string(va_list types, char buffer[],
-int flags, int width, int precision, int size);
-int print_percent(va_list types, char buffer[], int flags,
-int width, int precision, int size);
-
-
-
-
-#endif
-
-
+#endif /*MAIN_H*/

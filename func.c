@@ -8,8 +8,10 @@
 int print_char(va_list a)
 {
 	int c;
-	c = va_arg(a, int);
-	_putchar(c);
+
+c = va_arg(a, int);
+
+_putchar(c);
 	return (1);
 }
 
@@ -38,34 +40,3 @@ int print_string(va_list s)
 	return (i);
 }
 
-/**
- * print_int - print an int
- * @s: va_list for printf
- * Return: number of digits printed
- */
-int print_int(va_list s)
-{
-	int n = 0;
-	int nb;
-
-	nb = va_arg(s, int);
-	print_number(nb, &n);
-	return (n);
-}
-
-/**
- * print_addr - print address of a variable
- * @ptr: va_list for printf
- * Return: number of digits printed
- */
-int print_addr(va_list ptr)
-{
-	int n = 5;
-	void *nb;
-
-	_putstr("0x7ff");
-	nb = va_arg(ptr, void *);
-	hex_addr((unsigned long int)nb, &n);
-
-	return (n);
-}

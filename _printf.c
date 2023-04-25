@@ -19,9 +19,9 @@ static int check_formatage(char c)
 /**
  * check_arg - check to found the argument
  * @arg: va_list
- * @format : format
- * @symbole : symbole
- * Return: size
+ * @_format: format
+ * @symbole: symbole
+ * Return:size
  */
 
 static int check_arg(va_list arg, char *_format, format_t *symbole)
@@ -69,7 +69,7 @@ static int check_arg(va_list arg, char *_format, format_t *symbole)
 
 /**
 * _printf - print in stdout a _format string
-* @format: string with _format
+* @_format: string with _format
 * Return: size of characters
 */
 
@@ -80,18 +80,7 @@ int _printf(const char *_format, ...)
 	format_t symbole[] = {
 		{'s', print_string},
 		{'c', print_char},
-		{'d', print_int},
-		{'i', print_int},
-		{'b', print_binary},
-		{'o', print_octo},
-		{'x', print_hex_low},
-		{'X', print_hex_up},
-		{'u', print_unsigned},
-		{'r', print_rev},
-		{'R', print_rot13},
-		{'S', print_String},
-		{'p', print_addr},
-		{'\0', NULL},
+		{'\0', NULL}
 	};
 
 	if (_format == NULL)

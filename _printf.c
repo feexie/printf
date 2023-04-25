@@ -80,6 +80,8 @@ int _printf(const char *_format, ...)
 	format_t symbole[] = {
 		{'s', print_string},
 		{'c', print_char},
+		{'d', print_int},
+		{'i', print_int},
 		{'\0', NULL}
 	};
 

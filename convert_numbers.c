@@ -100,7 +100,7 @@ int check = 1;
 
 	if (number / bin)
 	{
-		hex_S(number / bin, ptr);
+		hex_up_func(number / bin, ptr);
 	}
 	if (check == 1)
 	{

@@ -6,9 +6,13 @@
 */
 int print_String(va_list s)
 {
-	int i = 0;
-	int size = 0;
+	int i;
+	int size;
 	unsigned char *str;
+
+	i = 0;
+
+	size = 0;
 
 	str = va_arg(s, unsigned char *);
 	if (str == NULL)

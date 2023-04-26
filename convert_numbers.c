@@ -38,7 +38,7 @@ octal  = 8;
 
 
 /**
-* hex_up - a function that  convert decimal to hexadecimal uppercase
+	* hex_up - a function that  convert decimal to hexadecimal uppercase
 * @number: an usigned variable that store number
 * @ptr: size for printf
 */

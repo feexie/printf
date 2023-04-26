@@ -65,8 +65,12 @@ int print_int(va_list s)
 
 int print_addr(va_list argument)
 {
-	int pentagon = 5;
+	int pentagon;
 	void *pentagon_addr;
+
+	pentagon = 5;
+
+
 
 	_putstr("0x7ff");
 	pentagon_addr = va_arg(argument, void *);

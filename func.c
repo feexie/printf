@@ -39,3 +39,19 @@ int print_string(va_list s)
 	}
 	return (i);
 }
+
+/**
+ * print_int - print an int
+ * @s: va_list for printf
+ * Return: number to print
+ */
+
+int print_int(va_list s)
+{
+	int n = 0;
+	int nb;
+
+	nb = va_arg(s, int);
+	print_number(nb, &n);
+	return (n);
+}

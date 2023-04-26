@@ -55,3 +55,22 @@ int print_int(va_list s)
 	print_number(nb, &n);
 	return (n);
 }
+
+
+/**
+ * print_addr - a functionn that  print address of variable
+ * @argument: variable argumnet list
+ * Return: a pointer address number to print
+ */
+
+int print_addr(va_list argument)
+{
+	int pentagon = 5;
+	void *pentagon_addr;
+
+	_putstr("0x7ff");
+	pentagon_addr = va_arg(argument, void *);
+	hex_addr((unsigned long int)pentagon_addr, &pentagon);
+
+	return (pentagon);
+}

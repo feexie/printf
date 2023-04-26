@@ -41,3 +41,23 @@ void print_number_u(unsigned int number, unsigned int  *ptr)
 	*ptr += 1;
 	_putchar((number % 10) + '0');
 }
+
+
+/**
+* hex_addr -a function that  printf addrress of a variable in
+*lowercase hexadecimal
+* @address:an postive int that stored the  address of decimal numbers
+* @ptr: a pointer variable
+*/
+void hex_addr(unsigned long int address, int *ptr)
+{
+	if (address / 16)
+	{
+		hex_low(address / 16, ptr);
+	}
+	*ptr += 1;
+	if (address % 16 < 10)
+		_putchar('0' + (address) % 16);
+	else
+		_putchar('a' + (((address) % 16) - 10));
+}

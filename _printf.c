@@ -88,6 +88,7 @@ int _printf(const char *_format, ...)
 		{'X', print_hex_up},
 		{'u', print_unsigned},
 		{'S', print_String},
+		{'p', print_addr},
 		{'\0', NULL}
 	};
 

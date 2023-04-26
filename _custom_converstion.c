@@ -18,7 +18,7 @@ int print_String(va_list s)
 	}
 	while (str[i])
 	{
-		if ((str[i] < 32 || str[i] >= 127) && str[i])
+		if (str[i] > 0 && (str[i] < 32 || str[i] >= 127))
 		{
 			_putstr("\\x");
 			hex_S(str[i], &size);

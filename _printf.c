@@ -83,11 +83,6 @@ int _printf(const char *_format, ...)
 		{'d', print_int},
 		{'i', print_int},
 		{'b', print_binary},
-		{'u', print_unsigned},
-		{'o', print_octo},
-		{'x', print_hex_low},
-		{'X', print_hex_up},
-		{'S', print_String},
 		{'\0', NULL}
 	};
 

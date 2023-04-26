@@ -39,21 +39,3 @@ int print_string(va_list s)
 	}
 	return (i);
 }
-
-
-
-/**
- * print_int - a function that prints an integer
- * @s: a pva_list for printf
- * Return: an interger number to be printed by print
- */
-
-int print_int(va_list s)
-{
-	int number = 0;
-	int num_in_list;
-
-	num_in_list = va_arg(s, int);
-	print_number(num_in_list, &number);
-	return (number);
-}

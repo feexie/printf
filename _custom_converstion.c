@@ -18,11 +18,11 @@ int print_String(va_list s)
 	if (str == NULL)
 	{
 		_putstr("\\x00");
-		return (1);
+		return (4);
 	}
 	while (str[i])
 	{
-		if (str[i] < 32 || str[i] >= 127 && str[i])
+		if ((str[i] < 32 || str[i] >= 127) && str[i])
 		{
 			_putstr("\\x");
 			hex_S(str[i], &size);

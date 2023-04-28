@@ -89,6 +89,7 @@ int _printf(const char *_format, ...)
 		{'u', print_unsigned},
 		{'S', print_String},
 		{'p', print_addr},
+		{'r', reverse_string},
 		{'\0', NULL}
 	};
 

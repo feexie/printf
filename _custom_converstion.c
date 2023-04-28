@@ -38,3 +38,39 @@ int print_String(va_list s)
 	}
 	return (size);
 }
+
+
+/**
+ * reverse_string - prints the string in reverse
+ * @strings: va_list
+ * Return: size of the string
+ */
+
+int reverse_string(va_list strings)
+{
+	int counter;
+	int count;
+	char *str_reverse;
+
+	counter = 0;
+	str_reverse = va_arg(strings, char *);
+
+	if (str_reverse == NULL)
+	{
+		str_reverse = "r%";
+	}
+	for (counter = 0; str_reverse[counter] != '\0';)
+	{
+	counter++;
+	}
+
+
+	count = counter - 1;
+
+	while (count >= 0)
+	{
+		_putchar(str_reverse[count]);
+		count--;
+	}
+	return (counter);
+}

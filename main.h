@@ -17,7 +17,12 @@
 
 #define F_SPACE 16
 
+
+/* SIZES */
+#define S_LONG 2
+#define S_SHORT 1
 /* lib function*/
+
 int _printf(const char *_format, ...);
 int _isprintable(int c);
 void print_number(int n, int *size);

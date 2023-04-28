@@ -24,7 +24,7 @@ int print_hex_up(va_list b);
 int print_hex_low(va_list b);
 int print_unsigned(va_list u);
 int reverse_string(va_list strings);
-int print_rot13(va_list s);
+int hack_rot13(va_list s);
 int print_String(va_list s);
 int print_addr(va_list ptr);
 

@@ -1,0 +1,3 @@
+created _get_precison.c file
+added a function
+created a is_digit func

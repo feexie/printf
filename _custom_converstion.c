@@ -18,7 +18,7 @@ int print_String(va_list s)
 	if (str == NULL)
 	{
 		_putstr("\\x00");
-		return (4);
+		return (-1);
 	}
 	while (str[i])
 	{

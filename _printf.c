@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * check_formatage - check to found the argument
- * @c: char check
- * Return: size
+ * check_formatage - a function that check to found the argument
+ * @c: a character variable  check
+ * Return:a int  varibale called size
  */
 
 static int check_formatage(char c)
@@ -17,11 +17,11 @@ static int check_formatage(char c)
 }
 
 /**
- * check_arg - check to found the argument
- * @arg: va_list
- * @_format: format
- * @symbole: symbole
- * Return:size
+ * check_arg - a a function that check to found the argument
+ * @arg: variable argument va_list
+ * @_format: a string pointer called format
+ * @symbole:a function of type format_t structure symbole
+ * Return:a size
  */
 
 static int check_arg(va_list arg, char *_format, format_t *symbole)

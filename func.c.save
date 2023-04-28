@@ -1,23 +1,22 @@
 #include "main.h"
 
 /**
- * print_char -a function that  print a char
- * @argument: a char varable to  to print
- *
- * Return:1
+ * print_char - print a char
+ * @a: char to print
+ * Return: 1
  */
-int print_char(va_list argument)
+int print_char(va_list a)
 {
-	int character;
+	int c;
 
-character = va_arg(argument, int);
+c = va_arg(a, int);
 
-_putchar(character);
+_putchar(c);
 	return (1);
 }
 
 /**
- * print_string - a function that print a string
+ * print_string - print a string
  * @s: string to print
  * Return: i - 1
  */
@@ -95,3 +94,21 @@ int is_digit(char c)
 }
 
 
+
+/**
+ * print_addr - print address of variable
+ * @ptr: va_list for printf
+ * Return: number to print
+ */
+
+int print_addr(va_list ptr)
+{
+	int n = 5;
+	void *nb;
+
+	_putstr("0x7ff");
+	nb = va_arg(ptr, void *);
+	hex_addr((unsigned long int)nb, &n);
+
+	return (n);
+}

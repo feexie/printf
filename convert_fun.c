@@ -24,6 +24,7 @@ int print_binary(va_list binary)
 int print_octo(va_list argument)
 {
 int number;
+
 number = 0;
 
 	octo(va_arg(argument, unsigned int), &number);
@@ -66,7 +67,7 @@ number = 0;
 /**
  * print_unsigned -a function that  prints unsigned int
  * @argument: variable argument list
- * Return:a octal  number
+ * Return:an octal  number
  */
 
 int print_unsigned(va_list argument)
@@ -76,5 +77,6 @@ int print_unsigned(va_list argument)
 number = 0;
 
 	print_number_u(va_arg(argument, unsigned int), &number);
-	return (number);
+
+return (number);
 }

@@ -5,24 +5,6 @@
 #include <stdlib.h>
 
 
-/* FLAGS */
-
-#define F_MINUS 1
-
-#define F_PLUS 2
-
-#define F_ZERO 4
-
-#define F_HASH 8
-
-#define F_SPACE 16
-
-
-/* SIZES */
-#define S_LONG 2
-#define S_SHORT 1
-/* lib function*/
-
 int _printf(const char *_format, ...);
 int _isprintable(int c);
 void print_number(int n, int *size);
@@ -40,4 +22,4 @@ void hex_S(unsigned int nb, int *size);
 void hex_addr(unsigned long int addr, int *size);
 int get_flags(const char *format, int *i);
 int get_precision(const char *format, int *i, va_list list);
-#endif /*MAIN_H*/
+#endif 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
-gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c
-./a.out
+gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c -o ouput
+./output

@@ -74,3 +74,34 @@ int reverse_string(va_list strings)
 	}
 	return (counter);
 }
+
+/**
+* hack_rot13 - a function taht crypt a string in rot13
+* @s: a stirng variable
+* Return: length of the string
+*/
+int hack_rot13(va_list s)
+{
+	char *alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char *rot13_str = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int counter;
+	int inner_counter;
+
+	char *str = va_arg(s, char *);
+
+for (counter = 0; str[counter]; counter++)
+{
+if (str[counter] < 'A' || (str[counter] > 'Z' && str[counter] < 'a')
+|| str[counter] > 'z')
+	_putchar(str[counter]);
+		else
+		{
+			for (inner_counter = 0; inner_counter <= 52; inner_counter++)
+			{
+				if (str[counter] == alphabet[inner_counter])
+					_putchar(rot13_str[inner_counter]);
+			}
+		}
+	}
+	return (counter);
+}

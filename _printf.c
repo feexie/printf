@@ -90,6 +90,7 @@ int _printf(const char *_format, ...)
 		{'S', print_String},
 		{'p', print_addr},
 		{'r', reverse_string},
+		{'R', hack_rot13},
 		{'\0', NULL}
 	};
 
